@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #006633;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            font-size: 15px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #FFCC33;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="CS_page.html">CS Department</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1 class="text-center">STUDENT SURVEY FORM</h1>
+    <p><b>* Marks Mandatory Fields</b></p>
+    <form method="get">
+        <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" class="form-control" autofocus required placeholder="Enter First Name">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" class="form-control" required placeholder="Enter Last Name">
+        </div>
+
+        <div class="form-group">
+            <label>Street Address *</label>
+            <input type="text" class="form-control" required placeholder="Enter your address">
+        </div>
+
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" placeholder="Enter your city">
+        </div>
+
+        <div class="form-group">
+            <label>State</label>
+            <input type="text" class="form-control" placeholder="Enter your state">
+        </div>
+
+        <div class="form-group">
+            <label>ZIP code *</label>
+            <input type="text" class="form-control" required placeholder="Eg: 12345" pattern="[0-9]{5}">
+        </div>
+
+        <div class="form-group">
+            <label>Telephone Number *</label>
+            <input type="tel" class="form-control" required placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+
+        <div class="form-group">
+            <label>Email *</label>
+            <input type="email" class="form-control" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label>LinkedIn Link</label>
+            <input type="url" class="form-control" placeholder="Paste your URL">
+        </div>
+
+        <div class="form-group">
+            <label>Date of Survey</label>
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="grad-choice">High School Graduation Month and Year *</label>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" list="grad-yr" id="grad-choice" name="grad-choice" placeholder="Month" required>
+                    <datalist id="grad-yr">
+                        <option value="January">
+                        <option value="February">
+                        <option value="March">
+                        <option value="April">
+                        <option value="May">
+                        <option value="June">
+                        <option value="July">
+                        <option value="August">
+                        <option value="September">
+                        <option value="October">
+                        <option value="November">
+                        <option value="December">
+                    </datalist>
+                </div>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" placeholder="Year" required>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>What did you like most about the campus? *</label><br>
+            <label class="checkbox-inline"><input type="checkbox" required> Students</label>
+            <label class="checkbox-inline"><input type="checkbox"> Location</label>
+            <label class="checkbox-inline"><input type="checkbox"> Campus</label>
+            <label class="checkbox-inline"><input type="checkbox"> Atmosphere</label>
+            <label class="checkbox-inline"><input type="checkbox"> Dorm Rooms</label>
+            <label class="checkbox-inline"><input type="checkbox"> Sports</label>
+        </div>
+
+        <div class="form-group">
+            <label>How did you become interested in the university? *</label><br>
+            <label class="radio-inline"><input type="radio" name="interest" required> Internet</label>
+            <label class="radio-inline"><input type="radio" name="interest"> Friends</label>
+            <label class="radio-inline"><input type="radio" name="interest"> Television</label>
+            <label class="radio-inline"><input type="radio" name="interest"> Others</label>
+        </div>
+
+        <div class="form-group">
+            <label for="recommendation">How likely are you to recommend this school to other prospective students? *</label>
+            <select id="recommendation" name="recommendation" class="form-control" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="very_likely">Very Likely</option>
+                <option value="likely">Likely</option>
+                <option value="unlikely">Unlikely</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Additional Comments</label>
+            <textarea class="form-control" rows="4" placeholder="Enter text here..."></textarea>
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-success">SUBMIT</button>
+            <button type="button" class="btn btn-secondary">CANCEL</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
